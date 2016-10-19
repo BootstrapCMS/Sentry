@@ -54,11 +54,11 @@ class Sentry extends Facade
 
         return new BaseSentry(
             $userProvider,
-            $groupProvider    ?: new GroupProvider(),
+            $groupProvider ?: new GroupProvider(),
             $throttleProvider ?: new ThrottleProvider($userProvider),
-            $session          ?: new NativeSession(),
-            $cookie           ?: new NativeCookie(),
-            $ipAddress        ?: static::guessIpAddress()
+            $session ?: new NativeSession(),
+            $cookie ?: new NativeCookie(),
+            $ipAddress ?: static::guessIpAddress()
         );
     }
 
